@@ -1,0 +1,81 @@
+
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <aside *ngIf="menuInversiones" class="col-12 col-md-2 p-0 bg-dark fixed-top">
+            <nav class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start py-2">
+                <div class="collapse navbar-collapse align-items-start">
+                    <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                        <li class="nav-item">
+                            <a class="nav-link pl-0 text-nowrap" href="#" (click)="menuInversiones = false"><i class="fa fa-bullseye fa-fw"></i> <span class="font-weight-bold">Ocultar</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fa fa-heart-o fa-fw"></i> <span class="d-none d-md-inline">Posición Consolidada</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fa fa-book fa-fw"></i> <span class="d-none d-md-inline">Plazos fijos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fa fa-heart fa-fw"></i> <span class="d-none d-md-inline">Fondos de Inversión</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fa fa-star fa-fw"></i> <span class="d-none d-md-inline">Títulos, Bonos y Acciones</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Perfil Inversor</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" [routerLink]="['/tabla-inversiones']"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Resúmenes</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <main class="col offset-md-2 bg-faded py-3">
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#alertas">ALERTAS</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#solucitud_de_producto">SOLICITUD DE PRODUCTO</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#reclamos">RECLAMOS</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#movile_bancking">MOVILE BANKING</a>
+                </li>
+            </ul>
+            
+            <div class="container mt-3">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#inicio" (click)="menuInversiones = false">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#cuentas">CUENTAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#inversiones" (click)="menuInversiones = true">INVERSIONES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tarjetas">TARJETAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pretamos">PRETAMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#seguros">SEGUROS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pagos">PAGOS</a>
+                </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</div>

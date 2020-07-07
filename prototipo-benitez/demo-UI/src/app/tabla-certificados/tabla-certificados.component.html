@@ -1,0 +1,40 @@
+<!-- Begin Page Content -->
+<div class="container mt-3">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Tabla</h1>
+    <p *ngIf="vacio == false" class="mb-4">Consulta los últimos certificados de Ganancias Dividendos RG 4478.</p>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-body">
+
+            <p *ngIf="vacio" class="mb-4">En este momento no hay certificados disponibles.</p>
+
+            <div *ngIf="vacio == false" class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Resumen</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Resumen</th>
+                    </tr>
+                    </tfoot>
+                    <tbody *ngFor="let certificado of certificados">
+                    <tr>
+                        <td>{{certificado.fecha | date:'shortDate'}}</td>
+                        <td (click)="obtenerCertificado(certificado.id)">Ver</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- End of Main Content -->
